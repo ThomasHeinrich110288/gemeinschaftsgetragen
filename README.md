@@ -1,0 +1,2 @@
+# Gemeinschaftsgetragen
+Prototyp „Nachbarschaftszentrum Hainfeld“.
