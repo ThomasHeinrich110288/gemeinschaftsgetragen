@@ -11,9 +11,7 @@ Optional kann die Umgebungsvariable `NEXT_PUBLIC_START_PROJECT` gesetzt werden, 
 
 ## Deployment auf Render (Beispiel)
 1. Repository zu Render importieren und eine neue **Web Service**-Instanz erstellen.
-2. Build-Befehl (empfohlen): `./render-build.sh`
-   - Das Skript legt bei Bedarf automatisch eine `package-lock.json` an und führt anschließend `npm ci && npm run build` aus.
-   - Alternativ funktioniert auch `npm install && npm run build`, falls du den Lockfile lieber manuell erzeugst.
+2. Build-Befehl: `npm install && npm run build`
 3. Start-Befehl: `npm run start`
 4. Optionales Environment-Variable-Setup wie lokal (`NEXT_PUBLIC_START_PROJECT`).
 5. DNS: Wunsch-Subdomain per CNAME auf die Render-URL zeigen und in Render HTTPS aktivieren.
