@@ -1,0 +1,29 @@
+[
+  {
+    "id": "disc_1",
+    "projectId": "proj_nhz_hainfeld",
+    "itemId": "cost_rent",
+    "author": "Maria H.",
+    "type": "RATIONALE",
+    "createdAt": "2024-04-12T09:15:00+02:00",
+    "content": "Mir ist wichtig, dass wir den Raum ganzjährig nutzen können. Mit der Miete kaufen wir uns Verlässlichkeit und Planungssicherheit."
+  },
+  {
+    "id": "disc_2",
+    "projectId": "proj_nhz_hainfeld",
+    "itemId": "cost_power",
+    "author": "Yusuf K.",
+    "type": "QUESTION",
+    "createdAt": "2024-04-14T18:40:00+02:00",
+    "content": "Gibt es bereits Ideen für Energieeinsparungen? Vielleicht könnten wir an einem sonnigen Nachmittag gemeinsam die Fenster abdichten."
+  },
+  {
+    "id": "disc_3",
+    "projectId": "proj_nhz_hainfeld",
+    "itemId": "cost_printer",
+    "author": "Sofia L.",
+    "type": "COUNTERPROPOSAL",
+    "createdAt": "2024-04-16T11:05:00+02:00",
+    "content": "Vielleicht können wir mit dem regionalen Copyshop verhandeln, dass wir Überschüsse aus Workshops als Rabatt nutzen. Dann bleibt der Klickpreis auch langfristig fair."
+  }
+]
