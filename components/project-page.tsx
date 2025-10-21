@@ -86,21 +86,21 @@ export function ProjectPage({ bundle }: ProjectPageProps) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 lg:px-8 lg:py-12">
       <header className="mb-12 space-y-4">
-        <div className="text-sm uppercase tracking-wide text-white/80">{organization.name}</div>
-        <h1 className="text-3xl font-semibold text-white sm:text-4xl">{project.title}</h1>
-        <p className="text-lg text-white/80">Ein Ort von und für Hainfelder</p>
-        <p className="text-sm text-white/60">Standort: Hainfeld, NÖ</p>
-        <p className="max-w-3xl text-base text-white/80">{project.summary}</p>
+        <div className="text-sm uppercase tracking-wide text-primary">{organization.name}</div>
+        <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">{project.title}</h1>
+        <p className="text-lg text-slate-700">Ein Ort von und für Hainfelder</p>
+        <p className="text-sm text-slate-500">Standort: Hainfeld, NÖ</p>
+        <p className="max-w-3xl text-base text-slate-700">{project.summary}</p>
       </header>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-12">
           <section aria-labelledby="kosten-heading" className="space-y-6">
             <div>
-              <h2 id="kosten-heading" className="text-2xl font-semibold text-white">
+              <h2 id="kosten-heading" className="text-2xl font-semibold text-slate-900">
                 Kosten (monatlich)
               </h2>
-              <p className="text-sm text-white/70">
+              <p className="text-sm text-slate-600">
                 Transparente Übersicht über laufende Ausgaben und wie viel bereits zugesagt ist.
               </p>
             </div>
@@ -122,16 +122,16 @@ export function ProjectPage({ bundle }: ProjectPageProps) {
 
           <section aria-labelledby="aufgaben-heading" className="space-y-6">
             <div>
-              <h2 id="aufgaben-heading" className="text-2xl font-semibold text-white">
+              <h2 id="aufgaben-heading" className="text-2xl font-semibold text-slate-900">
                 Aufgaben
               </h2>
-              <p className="text-sm text-white/70">
+              <p className="text-sm text-slate-600">
                 Rollen zum Mitgestalten und ein Wochenplan zum Hüten des Raums.
               </p>
             </div>
 
-            <div className="rounded-lg border border-white/40 bg-white/10 p-6 shadow-lg backdrop-blur">
-              <h3 className="text-lg font-medium text-white">Rollen</h3>
+            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-medium text-slate-900">Rollen</h3>
               <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                 {roles.map((role) => (
                   <li key={role.id}>
@@ -141,10 +141,10 @@ export function ProjectPage({ bundle }: ProjectPageProps) {
                         setSelection({ kind: "task", item: role });
                         setActiveTab("details");
                       }}
-                      className="w-full rounded-md border border-white/40 bg-white/10 px-3 py-2 text-left text-sm text-white/80 shadow-lg transition hover:border-white focus-visible:border-white focus-visible:ring-2 focus-visible:ring-white/70"
+                      className="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-left text-sm text-slate-700 shadow-sm transition hover:border-primary/70 hover:shadow focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/40"
                     >
-                      <div className="font-medium text-white">{role.title}</div>
-                      <div className="text-xs text-white/70">{role.description}</div>
+                      <div className="font-medium text-slate-900">{role.title}</div>
+                      <div className="text-xs text-slate-600">{role.description}</div>
                     </button>
                   </li>
                 ))}
@@ -217,42 +217,42 @@ function CostCard({ cost, isActive, onSelect, onSupport }: CostCardProps) {
           onSelect();
         }
       }}
-      className={`group flex flex-col gap-4 rounded-xl border bg-white/10 p-6 shadow-xl backdrop-blur transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
-        isActive ? "border-white" : "border-white/40 hover:border-white/70"
+      className={`group flex flex-col gap-4 rounded-xl border bg-white p-6 shadow-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 ${
+        isActive ? "border-primary" : "border-slate-200 hover:border-primary/60"
       }`}
     >
       <div className="space-y-2">
         {cost.subtitle && (
-          <div className="text-xs font-medium uppercase tracking-wide text-white/80">
+          <div className="text-xs font-medium uppercase tracking-wide text-primary/90">
             {cost.subtitle}
           </div>
         )}
-        <h3 className="text-xl font-semibold text-white">{cost.title}</h3>
-        <p className="text-sm text-white/70">{needLabel}</p>
+        <h3 className="text-xl font-semibold text-slate-900">{cost.title}</h3>
+        <p className="text-sm text-slate-600">{needLabel}</p>
       </div>
 
       <div>
-        <div className="mb-1 flex items-center justify-between text-xs text-white/70">
+        <div className="mb-1 flex items-center justify-between text-xs text-slate-600">
           <span>Deckungsgrad</span>
           <span>{coverageLabel}</span>
         </div>
-        <div className="h-2 rounded-full bg-white/20">
+        <div className="h-2 rounded-full bg-slate-100">
           <div
-            className="h-2 rounded-full bg-white"
+            className="h-2 rounded-full bg-primary"
             style={{ width: `${Math.min(coveragePercent * 100, 100)}%` }}
           />
         </div>
       </div>
 
-      <p className="text-sm text-white/70">{pledgeSummary}</p>
+      <p className="text-sm text-slate-600">{pledgeSummary}</p>
 
       <div className="mt-auto flex items-center justify-between">
-        <div className="text-xs font-medium text-white/60">
+        <div className="text-xs font-medium text-slate-500">
           {cost.pledges.reduce((sum, pledge) => sum + pledge.count, 0)} Zusagen
         </div>
         <button
           type="button"
-          className="rounded-full border border-white/70 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white/70"
+          className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition hover:bg-primary-light"
           onClick={(event) => {
             event.stopPropagation();
             onSupport();
@@ -293,15 +293,15 @@ function TaskCard({ task, isActive, onSelect }: TaskCardProps) {
       tabIndex={0}
       onClick={onSelect}
       onKeyDown={handleKeyDown}
-      className={`rounded-xl border bg-white/10 p-6 shadow-xl backdrop-blur transition focus-visible:ring-2 focus-visible:ring-white/70 ${
-        isActive ? "border-white" : "border-white/40 hover:border-white/70"
+      className={`rounded-xl border bg-white p-6 shadow-sm transition focus-visible:ring-2 focus-visible:ring-primary/60 ${
+        isActive ? "border-primary" : "border-slate-200 hover:border-primary/60"
       }`}
     >
       <div className="flex flex-col gap-4">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h3 className="text-xl font-semibold text-white">{task.title}</h3>
-            <p className="text-sm text-white/70">{schedule.label}</p>
+            <h3 className="text-xl font-semibold text-slate-900">{task.title}</h3>
+            <p className="text-sm text-slate-600">{schedule.label}</p>
           </div>
           <button
             type="button"
@@ -309,18 +309,18 @@ function TaskCard({ task, isActive, onSelect }: TaskCardProps) {
               event.stopPropagation();
               onSelect();
             }}
-            className="rounded-md border border-white/70 px-3 py-1 text-sm font-semibold text-white transition hover:bg-white/20 focus-visible:ring-2 focus-visible:ring-white/70"
+            className="rounded-md border border-primary/40 px-3 py-1 text-sm font-medium text-primary transition hover:bg-primary/10 focus-visible:bg-primary/10"
           >
             Details anzeigen
           </button>
         </div>
-        <p className="text-sm text-white/70">{task.description}</p>
+        <p className="text-sm text-slate-600">{task.description}</p>
 
         <div className="overflow-x-auto">
           <div className="min-w-full">
-            <div className="grid grid-cols-7 gap-2 text-center text-xs text-white/70">
+            <div className="grid grid-cols-7 gap-2 text-center text-xs text-slate-600">
               {schedule.days.map((day) => (
-                <div key={day} className="font-medium uppercase tracking-wide text-white/80">
+                <div key={day} className="font-medium uppercase tracking-wide text-slate-700">
                   {day.slice(0, 2)}
                 </div>
               ))}
@@ -331,7 +331,7 @@ function TaskCard({ task, isActive, onSelect }: TaskCardProps) {
                   {hours.map((hour) => (
                     <div
                       key={`${day}-${hour}`}
-                      className="rounded border border-dashed border-white/30 bg-white/10 py-1 text-white/60"
+                      className="rounded border border-dashed border-slate-200 bg-slate-50 py-1 text-slate-500"
                     >
                       {hour.toString().padStart(2, "0")}:00
                     </div>
@@ -391,13 +391,13 @@ function Sidebar({
   };
 
   return (
-    <div className="rounded-2xl border border-white/40 bg-white/10 shadow-2xl backdrop-blur">
-      <div className="border-b border-white/30 p-6">
-        <div className="text-sm uppercase tracking-wide text-white/70">Sidebar</div>
-        <h2 className="text-2xl font-semibold text-white">
+    <div className="rounded-2xl border border-slate-200 bg-white shadow-lg">
+      <div className="border-b border-slate-200 p-6">
+        <div className="text-sm uppercase tracking-wide text-primary">Sidebar</div>
+        <h2 className="text-2xl font-semibold text-slate-900">
           {selection ? selection.item.title : "Bitte ein Element wählen"}
         </h2>
-        <p className="mt-1 text-sm text-white/70">
+        <p className="mt-1 text-sm text-slate-600">
           {selection
             ? selection.kind === "cost"
               ? "Details, Dokumente und Diskussion zur Kostenposition"
@@ -405,7 +405,7 @@ function Sidebar({
             : "Wähle eine Kosten- oder Aufgabenkarte, um mehr zu erfahren."}
         </p>
       </div>
-      <div className="border-b border-white/30 px-6">
+      <div className="border-b border-slate-200 px-6">
         <nav className="flex space-x-4" aria-label="Tabs">
           {(Object.keys(TAB_LABELS) as TabKey[]).map((tabKey) => (
             <button
@@ -414,8 +414,8 @@ function Sidebar({
               onClick={() => onTabChange(tabKey)}
               className={`border-b-2 px-1 pb-3 text-sm font-medium transition ${
                 activeTab === tabKey
-                  ? "border-white text-white"
-                  : "border-transparent text-white/60 hover:text-white"
+                  ? "border-primary text-primary"
+                  : "border-transparent text-slate-500 hover:text-primary"
               }`}
             >
               {TAB_LABELS[tabKey]}
@@ -423,19 +423,19 @@ function Sidebar({
           ))}
         </nav>
       </div>
-      <div className="space-y-6 p-6 text-sm text-white/80">
+      <div className="space-y-6 p-6 text-sm text-slate-700">
         {!selection && <p>Keine Auswahl – bitte auf eine Karte klicken.</p>}
 
         {selection && activeTab === "details" && (
           <div className="space-y-4">
             <p>{selection.item.description}</p>
             {selection.kind === "cost" && selection.item.need && (
-              <p className="text-xs text-white/60">
+              <p className="text-xs text-slate-500">
                 Monatlicher Bedarf: {formatCurrency(selection.item.need, selection.item.currency)}
               </p>
             )}
             {selection.kind === "task" && selection.item.schedule && (
-              <p className="text-xs text-white/60">
+              <p className="text-xs text-slate-500">
                 Zeitfenster: {selection.item.schedule.label}
               </p>
             )}
@@ -444,21 +444,21 @@ function Sidebar({
               <dl className="space-y-2">
                 {Object.entries(selection.item.meta).map(([key, value]) => (
                   <div key={key} className="flex justify-between gap-4 text-xs">
-                    <dt className="font-medium text-white/70">{key}</dt>
-                    <dd className="text-right text-white/80">{value ?? "–"}</dd>
+                    <dt className="font-medium text-slate-600">{key}</dt>
+                    <dd className="text-right text-slate-700">{value ?? "–"}</dd>
                   </div>
                 ))}
               </dl>
             )}
 
-            <div className="rounded-lg border border-dashed border-white/50 bg-white/10 p-4">
-              <div className="text-sm font-medium text-white">Live-Ticker</div>
-              <p className="mt-1 text-xs text-white/70">
+            <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4">
+              <div className="text-sm font-medium text-slate-700">Live-Ticker</div>
+              <p className="mt-1 text-xs text-slate-500">
                 Kein Live-Ticker verbunden
               </p>
               <button
                 type="button"
-                className="mt-3 rounded-md border border-white/70 px-3 py-1 text-xs font-semibold text-white hover:bg-white/20 focus-visible:ring-2 focus-visible:ring-white/70"
+                className="mt-3 rounded-md border border-primary/40 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/10"
               >
                 Quelle hinzufügen
               </button>
@@ -473,12 +473,12 @@ function Sidebar({
                 <iframe
                   title="Dokumentenansicht"
                   src={selection.item.document}
-                  className="h-64 w-full rounded border border-white/30"
+                  className="h-64 w-full rounded border border-slate-200"
                 />
               ) : documentStatus === "loading" ? (
                 <p>Dokument wird geladen …</p>
               ) : (
-                <p className="text-white/60">
+                <p className="text-slate-500">
                   Demo-Datei (noch) nicht vorhanden. Bitte später erneut versuchen.
                 </p>
               )
@@ -490,7 +490,7 @@ function Sidebar({
 
         {selection && activeTab === "discussion" && (
           <div className="space-y-4">
-            <p className="text-xs text-white/60">
+            <p className="text-xs text-slate-500">
               Beiträge erscheinen öffentlich, nachdem ein LLM-gestützter Filter sie freigegeben hat.
             </p>
             <div className="space-y-3">
@@ -498,17 +498,17 @@ function Sidebar({
                 <DiscussionPost key={entry.id} entry={entry} />
               ))}
               {discussionEntries.length === 0 && (
-                <p className="text-white/60">Noch keine Beiträge vorhanden.</p>
+                <p className="text-slate-500">Noch keine Beiträge vorhanden.</p>
               )}
             </div>
             <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <label htmlFor="discussion-type" className="block text-xs font-medium text-white/70">
+                <label htmlFor="discussion-type" className="block text-xs font-medium text-slate-600">
                   Beitragstyp
                 </label>
                 <select
                   id="discussion-type"
-                  className="mt-1 w-full rounded-md border border-white/50 bg-white/10 px-3 py-2 text-sm text-white focus:border-white focus:ring-white/70"
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
                   value={pendingType}
                   onChange={(event) => setPendingType(event.target.value as DiscussionType)}
                 >
@@ -520,7 +520,7 @@ function Sidebar({
                 </select>
               </div>
               <div>
-                <label htmlFor="discussion-content" className="block text-xs font-medium text-white/70">
+                <label htmlFor="discussion-content" className="block text-xs font-medium text-slate-600">
                   Dein Beitrag
                 </label>
                 <textarea
@@ -528,14 +528,14 @@ function Sidebar({
                   required
                   rows={4}
                   placeholder="Beschreibe deinen Gedanken …"
-                  className="mt-1 w-full rounded-md border border-white/50 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus:border-white focus:ring-white/70"
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary focus:ring-primary"
                   value={pendingContent}
                   onChange={(event) => setPendingContent(event.target.value)}
                 />
               </div>
               <button
                 type="submit"
-                className="w-full rounded-md border border-white/60 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white/70"
+                className="w-full rounded-md bg-primary px-4 py-2 text-sm font-medium text-white transition hover:bg-primary-light"
               >
                 Beitrag als Vorschau anzeigen
               </button>
@@ -561,13 +561,13 @@ function relevantEntries(
 
 function DiscussionPost({ entry }: { entry: DiscussionEntry }) {
   return (
-    <article className="rounded-lg border border-white/40 bg-white/10 p-4 shadow-lg backdrop-blur">
-      <div className="flex items-center justify-between text-xs text-white/70">
-        <span className="font-semibold text-white">{DISCUSSION_LABELS[entry.type]}</span>
+    <article className="rounded-lg border border-slate-200 bg-slate-50 p-4 shadow-sm">
+      <div className="flex items-center justify-between text-xs text-slate-500">
+        <span className="font-medium text-primary">{DISCUSSION_LABELS[entry.type]}</span>
         <time dateTime={entry.createdAt}>{formatDate(entry.createdAt)}</time>
       </div>
-      <p className="mt-2 text-sm text-white/80 whitespace-pre-line">{entry.content}</p>
-      <div className="mt-3 text-xs text-white/60">— {entry.author}</div>
+      <p className="mt-2 text-sm text-slate-700 whitespace-pre-line">{entry.content}</p>
+      <div className="mt-3 text-xs text-slate-500">— {entry.author}</div>
     </article>
   );
 }

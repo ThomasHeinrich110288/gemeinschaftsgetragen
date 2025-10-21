@@ -9,12 +9,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#EA580C",
-          light: "#FB923C",
-          dark: "#C2410C"
+          DEFAULT: "#1B4332",
+          light: "#2D6A4F"
         },
-        accent: "#FDBA74",
-        muted: "rgba(255, 255, 255, 0.2)"
+        accent: "#40916C",
+        muted: "#F1F3F5"
       }
     }
   },
