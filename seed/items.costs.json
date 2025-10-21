@@ -1,0 +1,82 @@
+[
+  {
+    "id": "cost_rent",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "COST",
+    "title": "Miete",
+    "subtitle": "Warme Räume im Zentrum",
+    "need": 900,
+    "currency": "EUR",
+    "meta": {
+      "Adresse": "Hauptplatz 3, 3170 Hainfeld",
+      "Vermieter:in": "Stadtgemeinde Hainfeld",
+      "Vertrag": "Indexgebundener Mietvertrag, Stand März 2024"
+    },
+    "description": "Die Miete deckt die monatliche Nutzung der Räume inklusive Betriebskosten. Damit das Zentrum für offene Treffs, Beratungen und Kurse verfügbar bleibt, braucht es eine verlässliche Kostendeckung.",
+    "document": "/docs/Mietvertrag.pdf"
+  },
+  {
+    "id": "cost_power",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "COST",
+    "title": "Strom",
+    "subtitle": "Licht, Wärme und Steckdosen",
+    "need": 40,
+    "currency": "EUR",
+    "meta": {
+      "Anbieter": "Energie Niederösterreich",
+      "Tarif": "Regionalstrom Gemeinschaftstarif",
+      "Zähler": "123-456-789"
+    },
+    "description": "Wir halten das Zentrum energieeffizient und klimafreundlich in Betrieb. Der Strom deckt Licht, Lüftung und Geräte für Veranstaltungen ab.",
+    "document": null
+  },
+  {
+    "id": "cost_printer",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "COST",
+    "title": "Drucker (Klickvertrag)",
+    "subtitle": "Infomaterial und Werkstatt-Handouts",
+    "need": 25,
+    "currency": "EUR",
+    "meta": {
+      "Modell": "Riso ComColor FT5000",
+      "Partner": "Copyland St. Pölten",
+      "Leistungsumfang": "500 Seiten in Farbe, Wartung inklusive"
+    },
+    "description": "Der Drucker versorgt uns mit Material für Workshops, Flyer für Veranstaltungen und Informationsblätter für Nachbar:innen.",
+    "document": null
+  },
+  {
+    "id": "cost_bank",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "COST",
+    "title": "Vereinskonto",
+    "subtitle": "Gemeinsame Finanzen im Blick",
+    "need": null,
+    "currency": "EUR",
+    "meta": {
+      "Bank": "Raiffeisenbank Hainfeld",
+      "Hinweis": "Kontoführungsgebühr wird jährlich abgerechnet",
+      "Status": "Gespräch über solidarische Konditionen läuft"
+    },
+    "description": "Damit Mitgliedsbeiträge und Spenden ordentlich verwaltet werden können, braucht es ein Vereinskonto mit transparenten Zugängen.",
+    "document": null
+  },
+  {
+    "id": "cost_web",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "COST",
+    "title": "Webseitenkosten",
+    "subtitle": "Digital sichtbar bleiben",
+    "need": null,
+    "currency": "EUR",
+    "meta": {
+      "Hosting": "Render Demo-Account",
+      "Domain": "gemeinschaftsgetragen.at (angefragt)",
+      "Tools": "Open-Source CMS, Newsletter-Tool in Prüfung"
+    },
+    "description": "Online informieren wir über Veranstaltungen, dokumentieren Fortschritte und ermöglichen digitale Beteiligung.",
+    "document": null
+  }
+]

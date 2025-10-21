@@ -1,0 +1,17 @@
+[
+  {
+    "itemId": "cost_rent",
+    "maxAmount": 100,
+    "count": 18
+  },
+  {
+    "itemId": "cost_power",
+    "maxAmount": 10,
+    "count": 4
+  },
+  {
+    "itemId": "cost_printer",
+    "maxAmount": 10,
+    "count": 5
+  }
+]

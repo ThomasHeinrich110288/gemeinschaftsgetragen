@@ -1,0 +1,61 @@
+[
+  {
+    "id": "role_chair",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "ROLE",
+    "title": "Obmann",
+    "description": "Koordiniert das Gesamtbild, lädt zu Treffen ein und hält den Kontakt zur Gemeinde."
+  },
+  {
+    "id": "role_chair_deputy",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "ROLE",
+    "title": "Stellvertreter (Obmann)",
+    "description": "Übernimmt Moderationen und vertritt den Obmann bei Abwesenheit."
+  },
+  {
+    "id": "role_secretary",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "ROLE",
+    "title": "Schriftführer",
+    "description": "Protokolliert Entscheidungen, pflegt Dokumente und sorgt für Transparenz."
+  },
+  {
+    "id": "role_secretary_deputy",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "ROLE",
+    "title": "Stellvertreter (Schriftführer)",
+    "description": "Hilft bei der Dokumentation und koordiniert Veröffentlichungen."
+  },
+  {
+    "id": "role_treasurer",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "ROLE",
+    "title": "Kassier",
+    "description": "Behält die Finanzen im Blick und erstellt monatliche Übersichten."
+  },
+  {
+    "id": "role_treasurer_deputy",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "ROLE",
+    "title": "Stellvertreter (Kassier)",
+    "description": "Kontrolliert Belege und unterstützt bei der Budgetplanung."
+  },
+  {
+    "id": "task_room_host",
+    "projectId": "proj_nhz_hainfeld",
+    "type": "TASK",
+    "title": "Raum hüten",
+    "schedule": {
+      "label": "Mo–So, 8–20 Uhr",
+      "startHour": 8,
+      "endHour": 20,
+      "days": ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
+    },
+    "description": "Wir halten den Raum offen, begrüßen Besucher:innen und achten darauf, dass alles in Schuss bleibt. Jede Stunde zählt und kann flexibel von verschiedenen Menschen übernommen werden.",
+    "meta": {
+      "Aufgaben": "Tür öffnen, Gäste begrüßen, Raum nach Nutzungen lüften",
+      "Ansprechperson": "Koordinationsteam Nachbarschaftszentrum"
+    }
+  }
+]
